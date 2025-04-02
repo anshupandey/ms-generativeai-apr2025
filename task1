@@ -1,0 +1,20 @@
+Write code for following tasks:
+
+App: Code Commentor
+
+user uploads a code file (python), app should analyze the code
+add docstrings, comments and export the updated code with suffix _c and extension as .py
+
+
+Solution APproach
+
+1. read the content of the provided .py file
+2. generate/rewrite code with doc string and comments
+    - write prompt to generate docstring and comments- make sure to not change code
+    - send a request to LLM and extract the 
+    - clean the llm response by removing ```python and ```
+3. write the llm response as .py file
+    - get the filename without .py from the input file name
+    - add _c extension and .py extentions
+    - export the output of llm with new filename.
+    - print the status
