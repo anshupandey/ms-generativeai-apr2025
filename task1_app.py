@@ -2,8 +2,9 @@ import streamlit as st
 from openai import OpenAI
 import re
 import os
-api_key = "********"
-client = OpenAI(api_key=api_key)
+from dotenv import load_dotenv
+load_dotenv()
+client = OpenAI()
 
 def clean_response(text):
    text = re.sub("```python","",text) 
